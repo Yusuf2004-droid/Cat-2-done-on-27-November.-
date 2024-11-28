@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Account</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: whitesmoke;
+            width: 100%;
+            border-radius: 4px;
+        }
+
+        .form-container {
+            width: 600px;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 8px;
+            
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .error {
+            color: red;
+            font-size: 12px;
+            margin-bottom: 15px;
+            display: inline;
+        }
+
+        .button-group {
+            text-align: center;
+        }
+
+        .button-group button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .register {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .clear {
+            background-color: #dc3545;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Register Account</h1>
+        <form>
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" placeholder="as">
+            <div class="error">User name must be at least 4 characters</div>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="..">
+            <div class="error">Password must be at least 4 characters</div>
+
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirm-password" name="confirm-password"placeholder="....." required minlength="8">
+            <div class="error">Passwords do not match</div>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="john@email"required pattern="a-z0-9">
+            <div class="error">Invalid email format</div>
+            <!--Format:john@gmail.com-->
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" name="phone" placeholder="1111111111">
+            <div class="error">Invalid phone number</div>
+<!--Format:0-XXX-XXX-XXX-->
+            <label for="zip-code">Zip Code:</label>
+            <input type="text" id="zip-code" name="zip-code" placeholder="11111111111111111">
+            <div class="error">Invalid Zip Code</div>
+<!--Format:use 5 or 9 digits Zip Code-->
+            <label for="card-type">Card Type:</label>
+            <select id="card-type" name="card-type" aria-placeholder="visa">
+                <option value="visa">Visa</option>
+                <option value="mastercard">MasterCard</option>
+                <option value="amex">American Express</option>
+            </select>
+
+            <label for="card-number">Card Number:</label>
+            <input type="text" id="card-number" name="card-number" placeholder="111111111111">
+            <div class="error">Invalid card number format</div>
+<!--Format:1111-2222-3333-4444-->
+            <label for="expiration-date">Expiration Date:</label>
+            <input type="text" id="expiration-date" name="expiration-date" placeholder="1111111111">
+            <div class="error">Invalid date format</div>
+<!--Format:YYYY-MM-DD-->
+            <div class="button-group">
+                <button type="submit" class="register">Register</button>
+                <button type="reset" class="clear">Clear Form</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html> 
